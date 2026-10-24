@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 export default function Banner() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-teal-50 via-white to-cyan-50">
+    <section className="relative overflow-hidden `bg-gradient-to-br` from-teal-50 via-white to-cyan-50">
       {/* Background Decoration */}
       <div className="pointer-events-none absolute -left-24 top-20 h-64 w-64 rounded-full bg-teal-200/30 blur-3xl" />
       <div className="pointer-events-none absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-cyan-200/30 blur-3xl" />
@@ -87,7 +87,7 @@ export default function Banner() {
           <div className="absolute -bottom-3 -left-3 h-28 w-28 rounded-3xl bg-cyan-200/60 sm:-bottom-5 sm:-left-5" />
           <div className="relative rounded-3xl border border-white bg-white p-4 shadow-2xl shadow-slate-900/10 sm:p-6">
             {/* Illustration Area */}
-            <div className="relative flex min-h-64 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-teal-100 via-cyan-50 to-sky-100 p-6 sm:min-h-80">
+            <div className="relative flex min-h-64 items-center justify-center overflow-hidden rounded-2xl `bg-gradient-to-br` from-teal-100 via-cyan-50 to-sky-100 p-6 sm:min-h-80">
               <div className="absolute left-8 top-8 h-12 w-12 rounded-2xl bg-white/70" />
               <div className="absolute bottom-8 right-8 h-16 w-16 rounded-full bg-white/60" />
 
