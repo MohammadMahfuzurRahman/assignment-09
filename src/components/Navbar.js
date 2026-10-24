@@ -16,7 +16,6 @@ import {
   Sun,
   Moon,
 } from "lucide-react";
-
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
