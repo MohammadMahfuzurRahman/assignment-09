@@ -1,4 +1,4 @@
-
+import { Suspense } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -111,10 +111,14 @@ const tutors = [
     subjects: ["Cell Biology", "Genetics", "Human Biology"],
   },
 ];
-export default async function TutorDetailsPage({ params }) {
+export function generateStaticParams() {
+  return tutors.map((tutor) => ({
+    id: tutor.id,
+  }));
+}
+async function TutorDetailsContent({ params }) {
   const { id } = await params;
   const tutor = tutors.find((item) => item.id === id);
-
   if (!tutor) {
     notFound();
   }
@@ -280,5 +284,12 @@ export default async function TutorDetailsPage({ params }) {
         </aside>
       </section>
     </div>
+  );
+}
+export default function TutorDetailsPage({ params }) {
+  return (
+    <Suspense fallback={<div>Loading tutor details...</div>}>
+      <TutorDetailsContent params={params} />
+    </Suspense>
   );
 }
